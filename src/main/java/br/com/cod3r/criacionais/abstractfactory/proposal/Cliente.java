@@ -3,6 +3,7 @@ package br.com.cod3r.criacionais.abstractfactory.proposal;
 import br.com.cod3r.criacionais.abstractfactory.proposal.factory.ParceiroAAbstractFactory;
 import br.com.cod3r.criacionais.abstractfactory.proposal.factory.ParceiroAbstractFactory;
 import br.com.cod3r.criacionais.abstractfactory.proposal.factory.ParceiroBAbstractFactory;
+import br.com.cod3r.criacionais.abstractfactory.proposal.parceiro.ParceiroA;
 
 public class Cliente {
 	
@@ -11,6 +12,10 @@ public class Cliente {
 		System.out.println("Enviando a selfie para parceiroA - TramitarPropostaComercial");
 		
 		ParceiroAbstractFactory factoryPaceiroA =  new ParceiroAAbstractFactory();
+		/*
+		 * ParceiroA parceiroA = new ParceiroA(); 
+		 * TramitarPropostaComercial c = new TramitarPropostaComercial(parceiroA);
+		 */
 		TramitarPropostaComercial comercial = new TramitarPropostaComercial(factoryPaceiroA.getParceiro());
 		comercial.executar("imageBase64");;
 		
