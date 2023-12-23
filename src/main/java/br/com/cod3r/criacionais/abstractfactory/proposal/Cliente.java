@@ -12,10 +12,11 @@ public class Cliente {
 		System.out.println("Enviando a selfie para parceiroA - TramitarPropostaComercial");
 		
 		ParceiroAbstractFactory factoryPaceiroA =  new ParceiroAAbstractFactory();
-		/*
-		 * ParceiroA parceiroA = new ParceiroA(); 
-		 * TramitarPropostaComercial c = new TramitarPropostaComercial(parceiroA);
-		 */
+
+		 ParceiroA parceiroA = new ParceiroA();
+		 TramitarPropostaComercial c = new TramitarPropostaComercial(parceiroA);
+		 c.executar("imageBase64");;
+
 		TramitarPropostaComercial comercial = new TramitarPropostaComercial(factoryPaceiroA.getParceiro());
 		comercial.executar("imageBase64");;
 		

@@ -1,7 +1,5 @@
 package br.com.cod3r.criacionais.singleton.connectionPool;
 
-import java.util.Calendar;
-
 import br.com.cod3r.criacionais.singleton.connectionPool.conn.Connection;
 import br.com.cod3r.criacionais.singleton.connectionPool.conn.ConnectionPool;
 

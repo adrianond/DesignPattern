@@ -13,14 +13,14 @@ public abstract class TramitarProposta {
 	protected void executar(String base64) {
 		System.out.println("Iniciando o envio da selfie");
 
-		envioSelfie(base64);
+		enviarSelfie(base64);
 
 		finalizarProcesso();
 
 	}
 
-	protected void envioSelfie(String base64) {
-		parceiro.envioSelfie(base64);
+	protected void enviarSelfie(String base64) {
+		parceiro.enviarSelfie(base64);
 	}
 	
 	protected abstract void finalizarProcesso();

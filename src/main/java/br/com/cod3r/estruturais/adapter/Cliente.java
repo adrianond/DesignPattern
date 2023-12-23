@@ -22,7 +22,7 @@ public class Cliente {
 		// oldMonitor não é uma HDMI
 		//computer2.connectPort(oldMonitor);
 		
-		computer2.connectPort(new HDMIToVGAAdapter(oldMonitor));
+		computer2.connectPort(new HDMIToVGAAdapter(oldMonitor));//adapter com composicao
 		
 		computer2.sendImageAndSound("VGA image", "VGA sound");
 		
@@ -30,7 +30,7 @@ public class Cliente {
         System.out.println("------ Monitor Class Adapter ----------");
 		
 		Computer pc3 = new Computer();
-		HDMIToOldMonitorAdapter monitorAdaptee = new HDMIToOldMonitorAdapter();
+		HDMIToOldMonitorAdapter monitorAdaptee = new HDMIToOldMonitorAdapter();//adapter  com heranca
 		pc3.connectPort(monitorAdaptee);
 		pc3.sendImageAndSound("Cat and rainbow", "Nyan cat song");
 		
